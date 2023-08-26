@@ -10,8 +10,15 @@ export class HttpService {
 
     constructor ( private http: HttpClient ) {}
 
-    getData( table: string ): Observable<any> {
+    getData( table: string, id: number ): Observable<any> {
 
-        return this.http.get(`http://localhost/angular/ngEasyPortfolio/src/app/services/api/${table}.php?action=readAll`);
+            return this.http.get(`http://localhost/angular/ngEasyPortfolio/src/app/services/api/${table}.php?action=read&id=${id}`);
     }
+
+
+
+
+
+
+    
 }

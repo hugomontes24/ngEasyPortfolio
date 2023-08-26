@@ -3,8 +3,8 @@ export class User {
     firstname!: string;
     name!: string;
     password!: string;
-    date_inscription!: string;
-    date_connect!: string;
+    dateInscription!: string;
+    dateConnect!: string;
     role!: string;
     token!: string;
     confirmed!: number;
