@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginService } from 'src/app/services/api/login.service';
 
 @Component({
   selector: 'app-home-nav',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home-nav.component.scss']
 })
 export class HomeNavComponent {
-
+  
+  constructor(
+    protected loginService: LoginService
+  ){}
+  
 }

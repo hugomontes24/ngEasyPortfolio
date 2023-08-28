@@ -11,6 +11,8 @@ import { HomeComponent } from './home/home.component';
 import { HomeNavComponent } from './html/home-nav/home-nav.component';
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,16 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioComponent,
     HomeComponent,
     HomeNavComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     NgbModule,
     FontAwesomeModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

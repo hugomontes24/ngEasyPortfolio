@@ -12,7 +12,7 @@ export class HttpService {
 
     getData( table: string, id: number ): Observable<any> {
 
-            return this.http.get(`http://localhost/angular/ngEasyPortfolio/src/app/services/api/${table}.php?action=read&id=${id}`);
+            return this.http.get(`http://localhost/angular/ngEasyPortfolio/src/app/services/api/${table}.php?action=read&id=${id}`, {responseType: "json"} );
     }
 
 

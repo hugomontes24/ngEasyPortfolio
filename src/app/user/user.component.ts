@@ -21,7 +21,7 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   
     let currentId = this.route.snapshot.paramMap.get('id');
-  console.log(currentId);
+  // console.log(currentId);
 
     (currentId != null) ? this.currentUser.id = parseInt(currentId) : this.currentUser.id = 0;
     
