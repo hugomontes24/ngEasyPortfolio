@@ -6,7 +6,7 @@ header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 $pdo = new PDO(
-        'mysql:host=localhost;dbname=portfolio_project', 
+        'mysql:host=localhost;dbname=ng_easyportfolio', 
         'root', 
         '',
     array(

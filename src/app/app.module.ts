@@ -1,43 +1,40 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { PortfolioComponent } from './portfolio/portfolio.component';
 import { HomeComponent } from './home/home.component';
-import { HomeNavComponent } from './html/home-nav/home-nav.component';
+
 import { UserComponent } from './user/user.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { ProjectComponent } from './project/project.component';
+import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
+import { PortfolioModule } from './portfolio/portfolio.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioComponent,
     HomeComponent,
-    HomeNavComponent,
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    ProjectComponent,
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CoreModule,
+    SharedModule,
+    PortfolioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
 
-  constructor(library: FaIconLibrary){
-    library.addIconPacks(fas);
-    // library.addIconPacks(faCoffee);
-  }
  }

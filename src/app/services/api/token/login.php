@@ -32,21 +32,13 @@ if($_GET['action'] == 'login'){
             $user["password"]= "";
             
 
-
-
-
-                
+            
         }else{
             $user["id"] = 0;
             $user["name"] = "Mot de passe invalide";
         }
 
-
-
      }
-
-    //  Jwt::$header;
-
 
     // echo envoie le data (tableau) en format json
     echo json_encode($user); 

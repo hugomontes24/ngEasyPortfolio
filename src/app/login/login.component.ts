@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { LoginViewModel } from './../model/login-view-model';
-import { LoginService } from './../services/api/login.service';
+import { LoginService } from '../services/login.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/model/user';
+
 
 
 @Component({
@@ -21,13 +23,15 @@ export class LoginComponent {
 
   onLoginClick(event:any){
     this.loginService.login(this.loginViewModel).subscribe({
-      next:(response) => { console.log(response);
-                        },
+      next:(user:User) => { console.log(user);
+                            this.router.navigateByUrl("/portfolio");
+                        },    
       error: (err:Error) => {
                               console.log("Error");
                               this.loginError="Mdp ou email invalides";
                         },
-      complete: ()=> this.router.navigateByUrl("/user")
+      complete: ()=> {console.log("ok vers portfolio");
+      }
     })
   }
 

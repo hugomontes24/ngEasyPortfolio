@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
-import { HttpService } from '../services/api/http.service';
+import { HttpService } from '../services/http.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -20,12 +20,14 @@ export class UserComponent implements OnInit {
 
   ngOnInit(): void {
   
-    let currentId = this.route.snapshot.paramMap.get('id');
+    // let currentId = this.route.snapshot.paramMap.get('id');
   // console.log(currentId);
 
-    (currentId != null) ? this.currentUser.id = parseInt(currentId) : this.currentUser.id = 0;
+    // (currentId != null) ? this.currentUser.id = parseInt(currentId) : this.currentUser.id = 0;
     
-      this.getUsers(this.table, this.currentUser.id);
+      // this.getUsers(this.table, this.currentUser.id);
+
+
 
 
   }
@@ -42,12 +44,12 @@ export class UserComponent implements OnInit {
     // console.log (this.projects[index].dateStart.slice(0,10));  **  formater date pour affichage html
     // console.log(index);
     
-    this.currentUser.id= this.users[index].id;
+    // this.currentUser.id= this.users[index].id;
     // this.editProject.name= this.projects[index].name;
     // this.editProject.dateStart= this.projects[index].dateStart.slice(0,10);
     // this.editProject.teamSize= this.projects[index].teamSize;
 
-    this.getUsers(this.table, this.currentUser.id);
+    // this.getUsers(this.table, this.currentUser.id);
 
  
     // this.currentIndex=index;

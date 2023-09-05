@@ -66,7 +66,7 @@ class Jwt
         $payload = Jwt::getPayload($token);
 
         //on génère un token de vérification
-        $verifToken = Jwt::generate($header, $payload, $secret, 0);
+        $verifToken = Jwt::generateToken($header, $payload, $secret, 0);
 
         return $token === $verifToken;
     }

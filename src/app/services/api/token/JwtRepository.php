@@ -18,7 +18,7 @@ class JwtRepository
                     u_role as role,
                     u_token as token,
                     u_confirmed as confirmed             
-                FROM users
+                FROM user
                 WHERE u_email = :email";
     
         $result = $pdo->prepare($sql);
